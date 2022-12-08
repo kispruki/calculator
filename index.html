@@ -8,24 +8,12 @@
     <style>
         body{background-color: #5f5f5f; text-align: center;}
         table,td{border: solid 1px whitesmoke;padding: 5px}
+        td{height:50px; width: 25% }
 
         #output{height: 100px; width: 300px;}
     </style>
     <script>
-    var display = "";
-    var memory = "";
 
-    function clear(){display = "";};
-    function recall(){display = memory; memory = ""};
-    function savememory(){memory = display;};
-    function operator(w){
-    
-    };
-    function num(w){};
-    function posnegsw(){};
-    function dot(){};
-    function equals(){};
-    function doOut(){document.getElementById("output").innerHTML = display};
     </script>
 </head>
 <body>
@@ -35,34 +23,34 @@
     <td id="output", colspan="4"></td>
 </tr>
 <tr>
-    <td>Clear</td>
-    <td>M</td>
-    <td>M+</td>
-    <td>/</td>
+    <td onclick="">Clear</td>
+    <td onclick="">M</td>
+    <td onclick="">M+</td>
+    <td onclick="">/</td>
 </tr>
 <tr>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-    <td>*</td>
+    <td onclick="">7</td>
+    <td onclick="">8</td>
+    <td onclick="">9</td>
+    <td onclick="">*</td>
 </tr>
 <tr>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-    <td>-</td>
+    <td onclick="">4</td>
+    <td onclick="">5</td>
+    <td onclick="">6</td>
+    <td onclick="">-</td>
 </tr>
 <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>+</td>
+    <td onclick="">1</td>
+    <td onclick="">2</td>
+    <td onclick="">3</td>
+    <td onclick="">+</td>
 </tr>
 <tr>
-    <td>+/-</td>
-    <td>0</td>
-    <td>,</td>
-    <td>=</td>
+    <td onclick="">+/-</td>
+    <td onclick="">0</td>
+    <td onclick="">,</td>
+    <td onclick="">=</td>
 </tr>
 
 </table>
