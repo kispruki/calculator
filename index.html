@@ -14,6 +14,32 @@
     </style>
     <script>
         obj = [];
+        o1 = []
+        handle = [];
+        c = 0;
+        function equals() {
+           
+            for (i= 0; i<obj.length;i++){
+                if (obj[i] === 1){
+                    handle[c] += parseInt(obj[i].toString());
+                }
+                else {c++; handle[c] += obj[i];c++}
+            }
+        };
+        function calculate(){
+            for (i=0; i<handle.lenght; i++){
+                
+            }
+        };
+        function display(what){
+            document.getElementById("output").innerHTML += what;
+            obj.push(what)
+        }
+        function cls(){document.getElementById("output").innerHTML= "";
+        obj = [];
+        o1 = [];
+        handle = [];
+        c = 0;}
     </script>
 </head>
 <body>
@@ -23,34 +49,34 @@
     <td id="output", colspan="4"></td>
 </tr>
 <tr>
-    <td onclick="">Clear</td>
+    <td onclick="cls()">Clear</td>
     <td onclick="">M</td>
     <td onclick="">M+</td>
-    <td onclick="obj.push('/')">/</td>
+    <td onclick="display('/')">/</td>
 </tr>
 <tr>
-    <td onclick="obj.push(7)">7</td>
-    <td onclick="obj.push(8)">8</td>
-    <td onclick="obj.push(9)">9</td>
-    <td onclick="obj.push('*')">*</td>
+    <td onclick="display(7)">7</td>
+    <td onclick="display(8)">8</td>
+    <td onclick="display(9)">9</td>
+    <td onclick="display('*')">*</td>
 </tr>
 <tr>
-    <td onclick="obj.push(4)">4</td>
-    <td onclick="obj.push(5)">5</td>
-    <td onclick="obj.push(6)">6</td>
-    <td onclick="obj.push('-')">-</td>
+    <td onclick="display(4)">4</td>
+    <td onclick="display(5)">5</td>
+    <td onclick="display(6)">6</td>
+    <td onclick="display('-')">-</td>
 </tr>
 <tr>
-    <td onclick="obj.push(1)">1</td>
-    <td onclick="obj.push(2)">2</td>
-    <td onclick="obj.push(3)">3</td>
-    <td onclick="obj.push('+')">+</td>
+    <td onclick="display(1)">1</td>
+    <td onclick="display(2)">2</td>
+    <td onclick="display(3)">3</td>
+    <td onclick="display('+')">+</td>
 </tr>
 <tr>
     <td onclick="document.getElementById('output').innerHTML = 'Prukner András';">License</td>
-    <td onclick="obj.push(0)">0</td>
+    <td onclick="display(0)">0</td>
     <td onclick="">,</td>
-    <td onclick="">=</td>
+    <td onclick="equals()">=</td>
 </tr>
 
 </table>
