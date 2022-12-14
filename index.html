@@ -10,43 +10,34 @@
         table,td{border: solid 1px whitesmoke;padding: 5px}
         td{height:50px; width: 25% }
 
-        #output{height: 100px; width: 300px;}
+        #big{height: 100px; width: 300px;}
     </style>
     <script>
-        obj = [];
-        o1 = []
-        handle = [];
-        c = 0;
+        o1 = "";
+        
         function equals() {
-           
-            for (i= 0; i<obj.length;i++){
-                if (obj[i] === 1){
-                    handle[c] += parseInt(obj[i].toString());
-                }
-                else {c++; handle[c] += obj[i];c++}
-            }
-        };
-        function calculate(){
-            for (i=0; i<handle.lenght; i++){
-                
-            }
+            o2 = o1;
+            cls();
+            display(eval(o2))
         };
         function display(what){
             document.getElementById("output").innerHTML += what;
-            obj.push(what)
+            
+            o1 = document.getElementById("output").innerHTML;
         }
-        function cls(){document.getElementById("output").innerHTML= "";
-        obj = [];
-        o1 = [];
-        handle = [];
-        c = 0;}
+        function cls(){
+        document.getElementById("output").innerHTML= "";
+        o1 = "";
+        
+        
+        }
     </script>
 </head>
 <body>
 
 <table>
 <tr>
-    <td id="output", colspan="4"></td>
+    <td id="big" colspan="4"><span id="output"></span></td>
 </tr>
 <tr>
     <td onclick="cls()">Clear</td>
