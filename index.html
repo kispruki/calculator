@@ -14,7 +14,10 @@
     </style>
     <script>
         o1 = "";
-        
+        memory = "";
+        function Mplus(){memory = o1}  
+        function M(){display(memory)}
+        function Mminus(){memory=""}    
         function equals() {
             o2 = o1;
             cls();
@@ -27,13 +30,50 @@
         }
         function cls(){
         document.getElementById("output").innerHTML= "";
-        o1 = "";
+        o1 = "";}
+
         
-        
-        }
+        function keyboard(e){
+            var code = e.keyCode;
+            switch (code){
+                case 13: equals(); break;
+                case 46: cls(); break;
+                case 81: M(); break;
+                case 87: Mplus(); break;
+                case 69: Mminus(); break;
+                case 48: display(0); break;
+                case 49: display(1); break;
+                case 50: display(2); break;
+                case 51: display(3); break;
+                case 52: display(4); break;
+                case 53: display(5); break;
+                case 54: display(6); break;
+                case 55: display(7); break;
+                case 56: display(8); break;
+                case 57: display(9); break;
+                case 96:  display(0); break;
+                case 97:  display(1); break;
+                case 98:  display(2); break;
+                case 99:  display(3); break;
+                case 100: display(4); break;
+                case 101: display(5); break;
+                case 102: display(6); break;
+                case 103: display(7); break;
+                case 104: display(8); break;
+                case 105: display(9); break;
+
+                case 111: display("/"); break;
+                case 106: display("*"); break;
+                case 109: display("-"); break;
+                case 107: display("+"); break;
+                case 110: display("."); break;
+                
+            }
+            
+        };
     </script>
 </head>
-<body>
+<body onkeydown="keyboard(event)">
 
 <table>
 <tr>
@@ -41,33 +81,37 @@
 </tr>
 <tr>
     <td onclick="cls()">Clear</td>
-    <td onclick="">M</td>
-    <td onclick="">M+</td>
-    <td onclick="display('/')">/</td>
+    <td onclick="M()">M</td>
+    <td onclick="Mplus()">M+</td>
+    <td onclick="">M-</td>
 </tr>
 <tr>
+    
     <td onclick="display(7)">7</td>
     <td onclick="display(8)">8</td>
     <td onclick="display(9)">9</td>
-    <td onclick="display('*')">*</td>
+    <td onclick="display('/')">/</td>
+    
 </tr>
 <tr>
+    
     <td onclick="display(4)">4</td>
     <td onclick="display(5)">5</td>
     <td onclick="display(6)">6</td>
-    <td onclick="display('-')">-</td>
+    <td onclick="display('*')">*</td>
 </tr>
 <tr>
     <td onclick="display(1)">1</td>
     <td onclick="display(2)">2</td>
     <td onclick="display(3)">3</td>
-    <td onclick="display('+')">+</td>
+    <td onclick="display('-')">-</td>
+    
 </tr>
 <tr>
-    <td onclick="document.getElementById('output').innerHTML = 'Prukner András';">License</td>
     <td onclick="display(0)">0</td>
-    <td onclick="">,</td>
+    <td onclick="display('.')">,</td>
     <td onclick="equals()">=</td>
+    <td onclick="display('+')">+</td>
 </tr>
 
 </table>
