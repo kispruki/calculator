@@ -15,6 +15,29 @@
     <script>
         o1 = "";
         memory = "";
+        function sin(){
+    var input = document.getElementById("output").innerHTML;
+    var result = Math.sin(input);
+    document.getElementById("output").innerHTML = result;
+    o1 = result;
+}
+
+        function cos(){
+            var input = document.getElementById("output").innerHTML;
+    var result = Math.cos(input);
+    document.getElementById("output").innerHTML = result;
+    o1 = result;
+        }
+        function sqrt(){var input = document.getElementById("output").innerHTML;
+    var result = Math.sqrt(input);
+    document.getElementById("output").innerHTML = result;
+    o1 = result;}
+        function pow(){var input = document.getElementById("output").innerHTML;
+    var result = Math.pow(input,2);
+    document.getElementById("output").innerHTML = result;
+    o1 = result;}
+        
+
         function Mplus(){memory = o1}  
         function M(){display(memory)}
         function Mminus(){memory=""}    
@@ -112,6 +135,12 @@
     <td onclick="display('.')">,</td>
     <td onclick="equals()">=</td>
     <td onclick="display('+')">+</td>
+</tr>
+<tr>
+    <td onclick="sin()">sin</td>
+    <td onclick="cos()">cos</td>
+    <td onclick="sqrt()">sqrt</td>
+    <td onclick="pow()">pow</td>
 </tr>
 
 </table>
